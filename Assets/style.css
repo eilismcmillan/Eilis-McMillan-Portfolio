@@ -1,0 +1,403 @@
+/* 
+setting variables for commonly used colours and styles,
+to ensure continuity and efficiency 
+*/
+:root {
+  --brown: #540b0e;
+  --beige: beige;
+  --green: #8ecb74;
+  --orange: #f4a262;
+  --heading-weight: 600;
+}
+
+/* 
+flex display to allow responsive design
+set standard font for entire web application
+*/
+body {
+  display: flex;
+  background-color: var(--beige);
+  font-family: monospace;
+}
+
+/* 
+flex of 1 ensures everything grows at an equal rate
+set viewpoint to 100% of screen
+scroll overflow ensures what is not viewable below can can be viewed by scrolling down
+*/
+.page-content {
+  flex: 1;
+  height: 100vh;
+  overflow-y: scroll;
+}
+
+/* 
+not visible in the default screen resolution
+side panel is 100% of window height when displayed
+background pattern made using gradient
+*/
+#desktop-aside {
+  display: none;
+  height: 100vh;
+  width: 23%;
+  background-color: #e5e5f7;
+  opacity: 1;
+  background-image: linear-gradient(#ffffff 2px, transparent 1px),
+    linear-gradient(to right, #ffffff 2px, #8ecb74 1px);
+  background-size: 20px 20px;
+}
+
+header {
+  display: flex;
+  background-color: var(--brown);
+  color: var(--beige);
+  font-size: 2.8em;
+  margin-right: 0;
+  padding: 0.6em;
+  justify-content: center;
+  font-weight: var(--heading-weight);
+}
+
+/* 
+list elements sit in a row and are centered
+*/
+nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: var(--brown);
+  color: var(--green);
+  font-size: 1em;
+  padding: 1.2em;
+}
+
+nav ul a {
+  text-decoration: none;
+  padding: 14px 20px;
+}
+
+/* when cursor is hovered over the navigation links:
+the font grows cursor changes to indicate a link
+*/
+nav a:hover {
+  font-size: larger;
+  cursor: grab;
+}
+
+/* even once visited, links remain the same colour*/
+nav a:visited {
+  color: var(--green);
+}
+
+/* 
+image is centered within this section using auto margin
+border radius is given so image becomes a circle
+*/
+.central-section img {
+  display: block;
+  order: 1;
+  height: 14em;
+  width: 14em;
+  margin: 2em auto 2em auto;
+  border: 0.2em solid black;
+  border-radius: 50%;
+}
+
+/*
+this display is only for smaller screen resolutions
+rather than an aside, this stacks within the normal flow of the page content
+*/
+#mobile {
+  display: block;
+  background-color: #e5e5f7;
+  opacity: 1;
+  background-image: linear-gradient(#ffffff 2px, transparent 1px),
+    linear-gradient(to right, #ffffff 2px, #8ecb74 1px);
+  background-size: 20px 20px;
+  align-content: center;
+  padding: 2em;
+}
+
+/*
+padding and margins allow the text to sit nicely 
+both within its own element
+and amongst other child elements in this parent section
+*/
+#about-me h3 {
+  background-color: #f4a262;
+  font-size: 1.5em;
+  padding: 3% 5%;
+  margin: 5% 10% 0.5em 10%;
+  text-align: center;
+  border-radius: 30%;
+  font-weight: var(--heading-weight);
+  border: 0.1em solid black;
+}
+
+#about-me p {
+  background-color: #eec9ad;
+  font-size: 1.2em;
+  text-align: center;
+  padding: 12% 10% 10% 10%;
+  margin: 2%;
+  border-radius: 30%;
+  border: 0.15em solid black;
+}
+
+/*
+icon links are set to flex in order to allow for screen size changes
+*/
+
+.links {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  margin: auto;
+}
+
+/*
+icon links are styled to match the application design
+*/
+.links a {
+  margin: 1em 1em;
+  background-color: var(--orange);
+  color: var(--beige);
+  padding: 0.4em;
+  border: 0.2em solid black;
+  border-radius: 25%;
+}
+
+/*
+set icon link to change colour when cursor is hovered over
+*/
+.links a:hover {
+  background-color: var(--brown);
+}
+
+.links a:visited {
+  color: var(--beige);
+}
+
+/*
+set all h2s to be the same
+*/
+h2 {
+  background-color: #540b0e;
+  color: #f4a262;
+  font-size: 2.8em;
+  padding: 3% 0;
+  width: 100%;
+  text-align: center;
+  font-weight: var(--heading-weight);
+  margin-top: 1.5em;
+}
+
+#portfolio h3 {
+  text-align: center;
+  font-size: 2em;
+  margin: 0.2em auto 0.3em auto;
+  padding-top: 0.5em;
+}
+
+#portfolio a {
+  text-decoration: none;
+}
+
+.application-1 {
+  display: block;
+  margin: 2em 1em 1em 1em;
+  height: 25em;
+  background-color: var(--orange);
+  border: 0.18em solid black;
+}
+
+/*
+image links appear black and white and blurred until hovered over
+*/
+.application-1 img {
+  height: 70%;
+  width: 94%;
+  margin: 0.3em 3% 3% 3%;
+  border: 2px solid black;
+  filter: grayscale(100%) blur(4px);
+}
+
+.application-1 img:hover {
+  filter: grayscale(0%) blur(0px);
+}
+
+/*
+set the secondary application to sit alongside
+until screen resolution reaches a minimum threshold,
+at which pont the item will wrap and stack 
+*/
+.applications-small {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.applications-small img {
+  height: 70%;
+  width: 94%;
+  margin: 0.3em 3% 3% 3%;
+  border: 2px solid black;
+  filter: grayscale(100%) blur(4px);
+}
+
+.applications-small img:hover {
+  filter: grayscale(0%) blur(0px);
+}
+
+.application-2 {
+  margin: 1em;
+  width: 27em;
+  height: 25em;
+  background-color: #eec9ad;
+  border: 0.18em solid black;
+  flex: 1 1 27em;
+}
+
+.application-3 {
+  margin: 1em;
+  width: 27em;
+  height: 25em;
+  background-color: var(--green);
+  border: 0.18em solid black;
+  flex: 1 1 27em;
+}
+
+/*
+made contact box a distinct item by:
+changing colour, creating border and setting margins
+*/
+
+#contact-box {
+  display: block;
+  text-align: center;
+  border: 0.18em solid black;
+  background-color: var(--orange);
+  color: black;
+  font-size: 1.5em;
+  margin: 1em 3em;
+  padding: 1em;
+}
+
+/*
+set the styling of text input boxes within the contact form
+*/
+.text-input {
+  background-color: var(--beige);
+  border: 0.17em solid black;
+  border-radius: 10px;
+  margin: 0.4em;
+  font-family: monospace;
+  font-size: 0.7em;
+  width: 70%;
+}
+
+/* styled the buttom to be consistent with page design
+*/
+button {
+  margin: 1em;
+  height: 2em;
+  width: 8em;
+  font-size: 1em;
+  font-family: monospace;
+  font-weight: 550;
+  background-color: var(--green);
+  border: 0.13em solid black;
+}
+
+/*
+set button and cursor to change when hovered over
+*/
+button:hover {
+  cursor: pointer;
+  background-color: var(--brown);
+  color: var(--beige);
+  border-color: var(--green);
+}
+
+footer {
+  display: block;
+  text-align: center;
+  height: 1.5em;
+  background-color: var(--brown);
+  color: var(--beige);
+  padding-top: 0.5em;
+  padding-bottom: 0.5;
+}
+
+/*
+when screen display is reaches at least 768px display, 
+follwoing element with get change size
+*/
+@media (min-width: 768px) {
+  header {
+    font-size: 3.8em;
+    padding: 0.31em;
+  }
+
+  nav ul {
+    font-size: 1.4em;
+    padding: 0.7em;
+  }
+
+  .central-section img {
+    height: 16em;
+    width: 16em;
+  }
+
+  #about-me h3 {
+    margin-top: 0.5em;
+    font-size: 2.2em;
+  }
+
+  #about-me p {
+    font-size: 1.5em;
+    padding: 6%;
+  }
+}
+
+/*
+when screen display is reaches at least 92px display,
+mobile section and central image section dissapears, 
+and is replaced by the aside, which includes the content from both
+*/
+@media (min-width: 992px) {
+  #mobile {
+    display: none;
+  }
+  .central-section {
+    display: none;
+  }
+
+  #desktop-aside {
+    display: inline-block;
+  }
+  #desktop-aside img {
+    display: block;
+    margin: auto;
+    order: 1;
+    height: 11em;
+    width: 11em;
+    margin: 2em auto 2em auto;
+    border: 0.2em solid black;
+    border-radius: 50%;
+  }
+  #about-me {
+    margin-top: 3em;
+  }
+  #about-me h3 {
+    font-size: 1.5em;
+  }
+  #about-me p {
+    font-size: 1.2em;
+    padding: 12% 10% 10% 10%;
+  }
+  .links {
+    flex-wrap: wrap;
+    margin-top: 2em;
+  }
+}
