@@ -11,7 +11,7 @@ This application can therefore be sent to potential employers, colleagues, etc.,
 N/A
 
 ## Usage
-The portfolio website contains information about myself and a showcase of my current deployed web applications. It can be accessed using the url: ##. Beneath the header, there are three links that redirect you to the relevant section of the page. These sections are: 'About me', 'Portfolo', and 'Contact'. 
+The portfolio website contains information about myself and a showcase of my current deployed web applications. It can be accessed using the url: https://eilismcmillan.github.io/Eilis-McMillan-Portfolio/. Beneath the header, there are three links that redirect you to the relevant section of the page. These sections are: 'About me', 'Portfolo', and 'Contact'. 
 
 This web application is screen display responsive. When on smaller screen displays, such as mobiles or tablets, the profile image and 'about me' section will appear part of the main content section. Alternatively, when on desktops, these section will appear in a side bar. The social media icons within this act as links and can be clicked.
 
